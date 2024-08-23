@@ -20,9 +20,6 @@ const Navbar = () => {
         <button className="theme-btn">
           <i className="fa-solid fa-moon"></i>
         </button>
-        <button className="settings-btn">
-          <i className="fa-solid fa-gear"></i>
-        </button>
         <button className="login-btn">Login</button>
       </div>
     </div>

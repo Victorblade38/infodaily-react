@@ -1,88 +1,100 @@
 import React from "react";
-import "./Hero.css";
+import img1 from "../../assets/img-1.jpg";
+import img2 from "../../assets/img-2.jpg";
+import img3 from "../../assets/img-3.jpg";
 
 const Hero = () => {
+  const heroNewsData = [
+    {
+      provider: "CNN",
+      heading:
+        "Breaking News: Tech Innovation Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+      img: img1,
+    },
+    {
+      provider: "BBC",
+      heading:
+        "Global Market Update Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+      img: img2,
+    },
+    {
+      provider: "New York Times",
+      heading:
+        "Health and Wellness Tips Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+      img: img3,
+    },
+    {
+      provider: "CNN",
+      heading:
+        "Environmental Conservation Efforts Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+      img: img1,
+    },
+    {
+      provider: "New York Times",
+      heading:
+        "Sports Highlights Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+      img: img2,
+    },
+  ];
+
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(" ");
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(" ") + "...";
+    }
+    return text;
+  };
+
   return (
-    <div className="hero-container">
-      <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="..." className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
+    <div
+      id="carouselExampleCaptions"
+      className="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div className="carousel-inner">
+        {heroNewsData.map((item, index) => {
+          return (
+            <div
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+              data-bs-interval="4000"
+              key={index}
+            >
+              <img
+                src={item.img}
+                className="d-block w-100"
+                alt="..."
+                style={styles}
+              />
+              <div
+                className="carousel-caption d-none d-md-block"
+                style={{ textAlign: "start" }}
+              >
+                <button
+                  type="button"
+                  className="btn btn-danger"
+                  style={{ marginBottom: 20 + "px", fontWeight: "500" }}
+                >
+                  {item.provider}
+                </button>
+                <h3 style={textShadow}>-{truncateText(item.heading, 30)}</h3>
+              </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img src="..." className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
+          );
+        })}
       </div>
     </div>
   );
 };
 
 export default Hero;
+
+const styles = {
+  width: "90%",
+  height: "600px",
+  objectFit: "cover",
+};
+
+const textShadow = {
+  marginBottom: "20px",
+  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)",
+};
