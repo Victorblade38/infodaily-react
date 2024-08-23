@@ -6,6 +6,7 @@ const Navbar = () => {
       <div className="nav-links">
         <a href="#">Home</a>
         <a href="#">About</a>
+        <a href="#">Contact</a>
       </div>
       <div className="search-box-container">
         <input type="text" placeholder="Search..." />
