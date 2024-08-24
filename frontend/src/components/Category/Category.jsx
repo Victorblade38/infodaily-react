@@ -1,4 +1,5 @@
 import React from "react";
+import "./Category.css";
 
 const Category = () => {
   const categories = [
@@ -14,22 +15,21 @@ const Category = () => {
     <div className="container" style={{ marginTop: 20 + "px" }}>
       <ul
         className="nav justify-content-center"
-        style={{ display: "flex", gap: 2 + "em" }}
+        style={{ display: "flex", gap: 4 + "em" }}
       >
         {categories.map((item, index) => {
           return (
-            <li className="nav-item" key={index}>
-              <button className="btn btn-primary">
-                <a
-                  className={`nav-link ${index === 0 ? "active" : ""}`}
-                  aria-current="page"
-                  href={item.url}
-                  style={{ color: "#333" }}
-                >
-                  {item.category}
-                </a>
-              </button>
-            </li>
+            <div className="category-box" key={index}>
+              <a
+                href={item.url}
+                style={{
+                  textDecoration: "none",
+                  color: "blue",
+                }}
+              >
+                <span>{item.category}</span>
+              </a>
+            </div>
           );
         })}
       </ul>
