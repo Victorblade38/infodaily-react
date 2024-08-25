@@ -1,19 +1,19 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
-import Category from "../../components/Category/Category";
 import CardSection from "../../components/CardSection/CardSection";
+import LogoBar from "../../components/LogoBar/LogoBar";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   return (
     <div className="container">
-      <div className="logo">
-        <span>InfoDaily</span>
-      </div>
+      <LogoBar />
       <Navbar />
       <Hero />
-      <Category />
       <CardSection />
+      <Hero />
+      <Footer />
     </div>
   );
 };

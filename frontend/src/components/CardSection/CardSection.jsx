@@ -4,7 +4,7 @@ import "./CardSection.css";
 
 const CardSection = () => {
   return (
-    <div className="card-section" style={styles.container}>
+    <div className="card-section">
       {Array(8)
         .fill(0)
         .map((_, index) => (
@@ -15,12 +15,3 @@ const CardSection = () => {
 };
 
 export default CardSection;
-
-const styles = {
-  container: {
-    display: "grid",
-    gridTemplateColumns: " 1fr 1fr 1fr 1fr",
-    gap: "20px",
-    margin: "20px",
-  },
-};

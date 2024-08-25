@@ -71,12 +71,16 @@ const Hero = () => {
               >
                 <button
                   type="button"
-                  className="btn btn-danger"
-                  style={{ marginBottom: 20 + "px", fontWeight: "500" }}
+                  className="btn btn-light"
+                  style={{
+                    marginBottom: 20 + "px",
+                    fontWeight: "400",
+                    fontSize: "12px",
+                  }}
                 >
                   {item.provider}
                 </button>
-                <h3 style={textShadow}>-{truncateText(item.heading, 30)}</h3>
+                <h4 style={textShadow}>-{truncateText(item.heading, 30)}</h4>
               </div>
             </div>
           );

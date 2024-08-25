@@ -9,21 +9,24 @@ const Navbar = () => {
         <a href="#">Contact</a>
       </div>
       <div className="search-box-container">
-        <input type="text" placeholder="Search..." />
-        <button>
-          <i>
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </i>
+        <input type="text" placeholder="search here" />
+        <button
+          className="btn btn-outline-primary"
+          type="submit"
+          style={styles.searchbtn}
+        >
+          Search
         </button>
-      </div>
-      <div className="extra-options">
-        <button className="theme-btn">
-          <i className="fa-solid fa-moon"></i>
-        </button>
-        <button className="login-btn">Login</button>
       </div>
     </div>
   );
 };
 
 export default Navbar;
+
+const styles = {
+  searchbtn: {
+    height: "32px",
+    fontSize: "14px",
+  },
+};

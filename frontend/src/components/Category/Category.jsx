@@ -12,27 +12,21 @@ const Category = () => {
     { category: "Politics", url: "#" },
   ];
   return (
-    <div className="container" style={{ marginTop: 20 + "px" }}>
-      <ul
-        className="nav justify-content-center"
-        style={{ display: "flex", gap: 4 + "em" }}
-      >
-        {categories.map((item, index) => {
-          return (
-            <div className="category-box" key={index}>
-              <a
-                href={item.url}
-                style={{
-                  textDecoration: "none",
-                  color: "blue",
-                }}
-              >
-                <span>{item.category}</span>
-              </a>
-            </div>
-          );
-        })}
-      </ul>
+    <div className="container">
+      {categories.map((item, index) => {
+        return (
+          <a
+            key={index}
+            href={item.url}
+            style={{
+              textDecoration: "none",
+              color: "blue",
+            }}
+          >
+            <span>{item.category}</span>
+          </a>
+        );
+      })}
     </div>
   );
 };
