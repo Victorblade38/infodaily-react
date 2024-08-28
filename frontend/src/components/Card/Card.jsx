@@ -9,7 +9,7 @@ const Card = () => {
     return text;
   }
   return (
-    <div className="card" style={styles.container}>
+    <div className="card">
       <img
         src={`https://picsum.photos/200/300?random=${Math.random()}`}
         className="card-img-top"
@@ -37,9 +37,6 @@ const Card = () => {
 export default Card;
 
 const styles = {
-  container: {
-    boxShadow: "0 0 4px rgba(0, 0, 0, 0.2)",
-  },
   imgDim: {
     width: "100%",
     height: "200px",
