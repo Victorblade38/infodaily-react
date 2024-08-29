@@ -8,7 +8,7 @@ const Hero = () => {
     {
       provider: "CNN",
       heading:
-        "Breaking News: Tech Innovation Lorem ipsum dolor sit amet consectetur adipisicing elit. In culpa quaerat quasi aliquam tenetur explicabo a fugit dicta velit, perspiciatis laudantium. Adipisci rem neque inventore placeat perferendis dicta. Quibusdam, nobis!",
+        "RIL AGM today: Timing, when and where to watch Reliance livestream, agenda and more details",
       img: img1,
     },
     {
@@ -48,39 +48,22 @@ const Hero = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide"
+      className="carousel slide h-75 w-100"
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
         {heroNewsData.map((item, index) => {
           return (
             <div
-              className={`carousel-item ${index === 0 ? "active" : ""}`}
-              data-bs-interval="4000"
+              className={`carousel-item  ${index === 0 ? "active" : ""}`}
+              data-bs-interval="2000"
               key={index}
             >
-              <img
-                src={item.img}
-                className="d-block w-100"
-                alt="..."
-                style={styles}
-              />
-              <div
-                className="carousel-caption d-none d-md-block"
-                style={{ textAlign: "start" }}
-              >
-                <button
-                  type="button"
-                  className="btn btn-light"
-                  style={{
-                    marginBottom: 20 + "px",
-                    fontWeight: "400",
-                    fontSize: "12px",
-                  }}
-                >
-                  {item.provider}
-                </button>
-                <h4 style={textShadow}>-{truncateText(item.heading, 30)}</h4>
+              <img src={item.img} className="d-block h-75 w-100" alt="..." />
+              <div className="carousel-caption d-none d-md-block">
+                <h5 className="text-start text-break fs-1 fw-semibold">
+                  {item.heading}
+                </h5>
               </div>
             </div>
           );
@@ -99,6 +82,5 @@ const styles = {
 };
 
 const textShadow = {
-  marginBottom: "20px",
   textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)",
 };

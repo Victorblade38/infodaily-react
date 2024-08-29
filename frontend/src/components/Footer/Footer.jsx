@@ -30,6 +30,8 @@ const Footer = () => {
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Feedback</a>
       </div>
       <hr />
       <div className="footer-copyright">

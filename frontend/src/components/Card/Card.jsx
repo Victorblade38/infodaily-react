@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css";
 
 const Card = () => {
   function truncateText(text, maxWords) {
@@ -9,51 +10,30 @@ const Card = () => {
     return text;
   }
   return (
-    <div className="card">
+    <div className="card text-bg-dark border-0 ">
       <img
         src={`https://picsum.photos/200/300?random=${Math.random()}`}
-        className="card-img-top"
+        className="card-img rounded-0"
         alt="..."
-        style={styles.imgDim}
       />
-      <div className="card-body">
-        <h5 className="card-title">News Heading</h5>
-        <p className="card-text" style={styles.newsDetails}>
-          {truncateText(
-            "New Details - text to build on the card title and make up the bulk of the card's content.",
-            20
-          )}
+      <div className="bg-overlay">
+        <div className="card-img-overlay">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
+            {truncateText(
+              "New Details - text to build on the card title and make up the bulk of the card's content. lorem lorem lorem lorem lorem lorem",
+              22
+            )}
+          </p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <p className="card-text">
+          <small>Last updated 3 mins ago</small>
         </p>
-        <p style={styles.authorStyles}>News Author</p>
-        <p style={styles.publishDate}>Publisded Date</p>
-        <a href="#" className="btn btn-outline-primary">
-          Go somewhere
-        </a>
       </div>
     </div>
   );
 };
 
 export default Card;
-
-const styles = {
-  imgDim: {
-    width: "100%",
-    height: "200px",
-    objectFit: "cover",
-  },
-  newsDetails: {
-    fontWeight: "500",
-    color: "#6E6E6E",
-  },
-  publishDate: {
-    margin: "12px 0",
-    fontSize: "13px",
-    color: "#6E6E6E",
-  },
-  authorStyles: {
-    margin: "12px 0",
-    fontSize: "13px",
-    color: "#6E6E6E",
-  },
-};
