@@ -1,32 +1,16 @@
 import React from "react";
 import "./Category.css";
 
-const Category = () => {
-  const categories = [
-    { category: "Technology", url: "#" },
-    { category: "Science", url: "#" },
-    { category: "Economics", url: "#" },
-    { category: "Histroy", url: "#" },
-    { category: "Sports", url: "#" },
-    { category: "Entertainment", url: "#" },
-    { category: "Politics", url: "#" },
-  ];
+const Category = ({ category, url }) => {
   return (
-    <div className="container">
-      {categories.map((item, index) => {
-        return (
-          <a
-            key={index}
-            href={item.url}
-            style={{
-              textDecoration: "none",
-              color: "blue",
-            }}
-          >
-            <span>{item.category}</span>
-          </a>
-        );
-      })}
+    <div className="category">
+      <img
+        src={`https://picsum.photos/200/300?random=${Math.random()}`}
+        className="categories-img"
+      />
+      <a href={url} className="category-text">
+        <span>{category}</span>
+      </a>
     </div>
   );
 };

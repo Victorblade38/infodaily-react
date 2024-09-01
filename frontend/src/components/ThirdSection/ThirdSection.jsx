@@ -3,7 +3,7 @@ import img1 from "../../assets/img-1.jpg";
 import img2 from "../../assets/img-2.jpg";
 import img3 from "../../assets/img-3.jpg";
 
-const Hero = () => {
+const ThirdSection = () => {
   const heroNewsData = [
     {
       provider: "CNN",
@@ -65,7 +65,7 @@ const Hero = () => {
                 src={item.img}
                 alt="..."
                 style={{
-                  height: "60vh", // Set the desired height of the images
+                  height: "70vh", // Set the desired height of the images
                   objectFit: "cover", // Ensure images cover the area without distortion
                   objectPosition: "center", // Center the images within the container
                 }}
@@ -94,4 +94,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default ThirdSection;

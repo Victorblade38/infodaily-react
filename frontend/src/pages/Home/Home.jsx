@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import CardSection from "../../components/CardSection/CardSection";
 import LogoBar from "../../components/LogoBar/LogoBar";
-import Footer from "../../components/Footer/Footer";
+import CategorySection from "../../components/CategorySection/CategorySection";
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
       <LogoBar />
       <Navbar />
       <Hero />
+      <CategorySection />
       <CardSection />
     </div>
   );

@@ -3,7 +3,7 @@ import "./Card.css";
 
 const Card = () => {
   const Heading =
-    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, in.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, in.";
+    "Lorem ipsum dolor Lorem ipsum dolor  Lorem ipsum dolor  sit, amet consectetur adipisicing elit. Id, in.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, in.";
   function truncateText(text, maxWords) {
     const words = text.split(" ");
     if (words.length > maxWords) {
@@ -12,32 +12,20 @@ const Card = () => {
     return text;
   }
   return (
-    <div className="card bg-dark text-white hover" style={styles.cardHeight}>
-      <div class="card-header" style={{ height: 8 + "%", fontSize: 12 + "px" }}>
-        Uploaded 3mins ago
+    <div className="cardBox">
+      <div className="cardHeader">
+        <span>Uploaded 3mins ago</span>
       </div>
       <img
         src={`https://picsum.photos/200/300?random=${Math.random()}`}
         alt="Random image"
-        className="card-img rounded-0"
-        style={styles.imgHeight}
+        className="cardImg"
       />
-      <div className="card-footer card-text " style={{ height: 20 + "%" }}>
-        <p style={{ fontSize: 14 + "px" }}>{truncateText(Heading, 20)}</p>
+      <div className="cardText">
+        <p>{truncateText(Heading, 30)}</p>
       </div>
     </div>
   );
 };
 
 export default Card;
-
-const styles = {
-  cardHeight: {
-    height: "400px",
-    cursor: "pointer",
-  },
-  imgHeight: {
-    width: "100%",
-    height: "70%",
-  },
-};
