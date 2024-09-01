@@ -5,10 +5,6 @@ const LogoBar = () => {
   return (
     <div className="logo">
       <span>InfoDaily</span>
-      <div className="extra-options">
-        <i className="fa-solid fa-circle-half-stroke"></i>
-        <button className="btn btn-outline-dark">Login</button>
-      </div>
     </div>
   );
 };

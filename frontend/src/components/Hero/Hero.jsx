@@ -47,23 +47,37 @@ const Hero = () => {
 
   return (
     <div
-      id="carouselExampleCaptions"
-      className="carousel slide h-75 w-100"
+      id="carouselExampleSlidesOnly"
+      className="carousel slide"
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
         {heroNewsData.map((item, index) => {
+          const heading = item.heading;
           return (
             <div
-              className={`carousel-item  ${index === 0 ? "active" : ""}`}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
               data-bs-interval="2000"
               key={index}
             >
-              <img src={item.img} className="d-block h-75 w-100" alt="..." />
-              <div className="carousel-caption d-none d-md-block">
-                <h5 className="text-start text-break fs-1 fw-semibold">
-                  {item.heading}
-                </h5>
+              <img
+                className="d-block w-100"
+                src={item.img}
+                alt="..."
+                style={{
+                  height: "70vh", // Set the desired height of the images
+                  objectFit: "cover", // Ensure images cover the area without distortion
+                  objectPosition: "center", // Center the images within the container
+                }}
+              />
+              <div
+                className="carousel-caption d-md-block"
+                style={{
+                  textAlign: "start",
+                }}
+              >
+                <h6 className="text-start text-break">Cnn</h6>
+                <h5>{truncateText(heading, 30)}</h5>
               </div>
             </div>
           );
@@ -74,13 +88,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-const styles = {
-  width: "90%",
-  height: "600px",
-  objectFit: "cover",
-};
-
-const textShadow = {
-  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.5)",
-};

@@ -12,7 +12,6 @@ const Home = () => {
       <Navbar />
       <Hero />
       <CardSection />
-      <Footer />
     </div>
   );
 };
