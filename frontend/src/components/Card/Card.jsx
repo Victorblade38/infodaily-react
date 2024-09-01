@@ -2,6 +2,8 @@ import React from "react";
 import "./Card.css";
 
 const Card = () => {
+  const Heading =
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, in.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, in.";
   function truncateText(text, maxWords) {
     const words = text.split(" ");
     if (words.length > maxWords) {
@@ -10,30 +12,28 @@ const Card = () => {
     return text;
   }
   return (
-    <div className="card text-bg-dark border-0 ">
+    <div className="card bg-dark text-white" style={styles.cardHeight}>
+      <div class="card-header">Uploaded 3mins ago</div>
       <img
         src={`https://picsum.photos/200/300?random=${Math.random()}`}
+        alt="Random image"
         className="card-img rounded-0"
-        alt="..."
+        style={styles.imgHeight}
       />
-      <div className="bg-overlay">
-        <div className="card-img-overlay">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            {truncateText(
-              "New Details - text to build on the card title and make up the bulk of the card's content. lorem lorem lorem lorem lorem lorem",
-              22
-            )}
-          </p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <p className="card-text">
-          <small>Last updated 3 mins ago</small>
-        </p>
+      <div className="card-footer card-text">
+        <p>{truncateText(Heading, 20)}</p>
       </div>
     </div>
   );
 };
 
 export default Card;
+
+const styles = {
+  cardHeight: {
+    height: "500px",
+  },
+  imgHeight: {
+    height: "65%",
+  },
+};
