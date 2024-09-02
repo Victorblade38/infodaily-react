@@ -22,7 +22,7 @@ const Card = () => {
         className="cardImg"
       />
       <div className="cardText">
-        <p>{truncateText(Heading, 30)}</p>
+        <p>{truncateText(Heading, 16)}</p>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ const Navbar = () => {
         <button>Search</button>
       </div>
       <div className="settings">
-        <button>Dark Theme</button>
+        <button>Dark</button>
         <button>Settings</button>
       </div>
     </div>

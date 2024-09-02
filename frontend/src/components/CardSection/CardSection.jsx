@@ -5,7 +5,7 @@ import "./CardSection.css";
 const CardSection = () => {
   return (
     <div className="card-section">
-      {Array(8)
+      {Array(10)
         .fill(0)
         .map((_, index) => (
           <Card key={index} />
