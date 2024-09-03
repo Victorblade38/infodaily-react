@@ -113,22 +113,8 @@
   }
   
   .navbar-options-mode:hover, .navbar-options-profile:hover {
-    transform: scale(1.05); 
+    transform: scale(1.1); 
   }
   
-  .navbar-options-mode img {
-    width: 30px; 
-    height: 30px; 
-    display: block; 
-    border-radius: 50%; 
-  }
-  
-  .navbar-options-profile img {
-    width: 50px; 
-    height: 50px; 
-    display: block; 
-    border-radius: 50%; 
-  }
-
   
   

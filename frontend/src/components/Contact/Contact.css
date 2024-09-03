@@ -1,0 +1,46 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    height: 50vh;
+  }
+  
+  .contact-left, .contact-right {
+    width: 45%;
+  }
+  
+  .contact-left h2, .contact-right h2 {
+    margin-bottom: 10px;
+  }
+  
+  .contact-left input, .contact-left textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-left textarea {
+    height: 100px; /* Adjust height as needed */
+  }
+  
+  .contact-right .links-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-right .link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .contact-right .link-item img {
+    width: 24px; /* Adjust image size as needed */
+    height: 24px;
+    margin-right: 10px;
+  }
+  
