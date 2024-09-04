@@ -1,0 +1,21 @@
+.hero-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #f0f0f0; 
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container h1 {
+  text-align: left;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.hero-bottom-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr )); /* Responsive grid */
+  margin-bottom: 20px; /* Margin for bottom section */
+}

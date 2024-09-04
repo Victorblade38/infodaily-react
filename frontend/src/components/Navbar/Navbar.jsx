@@ -20,7 +20,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/category" className="navlink">
-              About
+              Category
             </NavLink>
           </li>
           <li>
@@ -39,10 +39,10 @@ const Navbar = () => {
       </div>
       <div className="navbar-options">
         <div className="navbar-options-mode">
-          <img src={moon} width={30} alt="moon" />
+          <img src={moon} width={24} alt="moon" />
         </div>
         <div className="navbar-options-profile">
-          <img src={default_profile} width={50} alt="profile" />
+          <img src={default_profile} width={40} alt="profile" />
         </div>
       </div>
     </div>
