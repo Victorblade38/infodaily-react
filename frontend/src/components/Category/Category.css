@@ -1,0 +1,22 @@
+.category-container {
+    width: 200px;
+    height: 60px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .category-container span {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-color);
+    z-index: 2; /* Ensure text is above the overlay */
+  }
+  

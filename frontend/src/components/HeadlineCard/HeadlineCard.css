@@ -28,7 +28,7 @@
   
  .primary-card-source {
     position: absolute;
-    bottom: 0px;
+    bottom: -4px;
     left: 0px;
     background-color: red;
     color: white;

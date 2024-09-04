@@ -2,7 +2,8 @@
 
 
 :root{
-    --text-color:#333
+    --text-color:#333;
+    --text-theme-color: #007BFF;
   }
 
 *{

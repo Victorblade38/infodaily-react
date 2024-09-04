@@ -1,9 +1,10 @@
 import React from "react";
+import "./Category.css";
 
-const Category = ({ Business }) => {
+const Category = ({ category = "Business" }) => {
   return (
     <div className="category-container">
-      <h4>{Business}</h4>
+      <span>{category}</span>
     </div>
   );
 };

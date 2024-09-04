@@ -5,6 +5,7 @@ import HeadlineCard from "../HeadlineCard/HeadlineCard";
 import Category from "../Category/Category";
 
 const Hero = () => {
+  const category = "Business";
   return (
     <div className="hero-container">
       <h1>Top Headlines</h1>
@@ -19,7 +20,7 @@ const Hero = () => {
       </div>
       <div className="hero-general-container">
         <h1>Category</h1>
-        <Category category={Business} />
+        <Category category={category} />
       </div>
     </div>
   );
