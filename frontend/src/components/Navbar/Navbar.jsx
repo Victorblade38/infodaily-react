@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import { moon, default_profile } from "../assets";
+import { moon, sun, default_profile } from "../assets";
 
 const Navbar = () => {
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink to="/category" className="navlink">
-              About
+              Category
             </NavLink>
           </li>
           <li>
@@ -38,11 +38,11 @@ const Navbar = () => {
         />
       </div>
       <div className="navbar-options">
-        <div className="navbar-options-mode">
-          <img src={moon} width={24} alt="moon" />
-        </div>
+        <button className="navbar-options-mode">
+          <img src={sun} width={24} alt="moon" />
+        </button>
         <div className="navbar-options-profile">
-          <img src={default_profile} width={40} alt="profile" />
+          <img src={default_profile} width={36} alt="profile" />
         </div>
       </div>
     </div>

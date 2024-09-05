@@ -1,5 +1,5 @@
 import React from "react";
-import GeneralNewsCard from "../GeneralNewsCard/GeneralNewsCard";
+import { GeneralNewsCard } from "../components.js";
 import "./GeneralNewsSection.css";
 
 const GeneralNewsSection = () => {

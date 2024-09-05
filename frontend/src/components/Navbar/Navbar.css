@@ -6,12 +6,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-color: var(--navbar-color); 
     justify-content: space-around;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 10px; 
-    background-color: #fff; 
-    z-index: 1000; 
 }
+
+
 
 .logo {
     letter-spacing: 1px; 
@@ -98,17 +99,33 @@
     align-items: center; 
     gap: 20px;
     padding: 10px; 
+    
   }
   
-  .navbar-options-mode, .navbar-options-profile {
+  .navbar-options-mode{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff; 
+    background: transparent;
     border-radius: 50%; 
+    border: 0;
+    outline: none;
     padding: 5px; 
     cursor: pointer; 
     transition: transform 0.2s ease; 
+  }
+
+  .navbar-options-profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; 
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
+  }
+
+  .navbar-options-profile img{
+    border-radius: 50%;
   }
   
   .navbar-options-mode:hover, .navbar-options-profile:hover {

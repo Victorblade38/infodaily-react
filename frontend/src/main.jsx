@@ -8,15 +8,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import Category from "./components/Category/Category.jsx";
-import Home from "./components/Home/Home.jsx";
+import Home from "./pages/Home/Home.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import CardsPage from "./pages/CardsPage/CardsPage.jsx";
+import { ThemeProvider } from "./context/theme.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="category" element={<Category />} />
+      <Route path="category" element={<CardsPage />} />
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<div>Not Found</div>} />
     </Route>
@@ -25,6 +26,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

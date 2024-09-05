@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeadlineCard.css";
-import Card from "../Card/Card";
+import { Card } from "../components.js";
 
 const HeadlineCard = () => {
   return (

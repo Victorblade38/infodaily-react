@@ -13,17 +13,30 @@ const Contact = () => {
       <div className="contact-right">
         <h2>Links</h2>
         <div className="links-list">
-          <a href="https://github.com" className="link-item">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=prathammhavale38@gmail.com"
+            className="link-item"
+          >
+            <img src={github} alt="GitHub" />
+            Gmail
+          </a>
+          <a href="https://github.com/Victorblade38" className="link-item">
             <img src={github} alt="GitHub" />
             GitHub
           </a>
-          <a href="https://linkedin.com" className="link-item">
+          <a
+            href="https://www.linkedin.com/in/pratham-mhavale"
+            className="link-item"
+          >
             <img src={linkedin} alt="LinkedIn" />
             LinkedIn
           </a>
-          <a href="https://twitter.com" className="link-item">
-            <img src={instagram} alt="Twitter" />
-            Twitter
+          <a
+            href="https://www.instagram.com/victorblade07"
+            className="link-item"
+          >
+            <img src={instagram} alt="Instagram" />
+            Instagram
           </a>
         </div>
       </div>

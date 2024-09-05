@@ -1,6 +1,6 @@
 import React from "react";
-import Category from "../Category/Category";
 import "./CategorySection.css";
+import { Category } from "../components.js";
 
 const CategorySection = () => {
   return (
