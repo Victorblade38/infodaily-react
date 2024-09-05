@@ -1,0 +1,34 @@
+.general-news-card {
+    width: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    cursor: pointer;
+  }
+    
+  
+  
+  .general-card-source {
+    width: 25%;
+    background-color: red;
+    color: white; 
+    padding: 4px 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    border-radius: 2px 2px 0 0 ;
+    
+  }
+  .general-card-source , .general-card-content{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .general-card-content {
+    background-color: #ffffff;
+    
+    text-align: left;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+  }
+

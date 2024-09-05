@@ -2,10 +2,8 @@ import React from "react";
 import Card from "../Card/Card";
 import "./Hero.css";
 import HeadlineCard from "../HeadlineCard/HeadlineCard";
-import Category from "../Category/Category";
 
 const Hero = () => {
-  const category = "Business";
   return (
     <div className="hero-container">
       <h1>Top Headlines</h1>
@@ -17,10 +15,6 @@ const Hero = () => {
         <Card />
         <Card />
         <Card />
-      </div>
-      <div className="hero-general-container">
-        <h1>Category</h1>
-        <Category category={category} />
       </div>
     </div>
   );

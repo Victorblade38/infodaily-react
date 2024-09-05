@@ -1,8 +1,10 @@
 .contact-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 100px;
-    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 100px;
   }
   
   .contact-left, .contact-right {
@@ -10,7 +12,7 @@
   }
   
   .contact-left h2, .contact-right h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   
   .contact-left input, .contact-left textarea {
@@ -22,7 +24,7 @@
   }
   
   .contact-left textarea {
-    height: 100px; /* Adjust height as needed */
+    height: 100px;
   }
   
   .contact-right .links-list {
@@ -33,7 +35,7 @@
   .contact-right .link-item {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-decoration: none;
     color: #000;
   }

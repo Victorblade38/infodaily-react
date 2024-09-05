@@ -19,9 +19,6 @@ const HeadlineCard = () => {
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
             facilis ipsam nulla velit doloribus, quo aliquid eos eaque? At,
-            quas. facilis ipsam nulla velit doloribus, quo aliquid eos eaque?
-            At, quas. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Facere facilis ipsam nulla velit doloribus, quo aliquid eos eaque?
           </p>
         </div>
       </div>

@@ -3,20 +3,22 @@
     max-width: 300px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
     background-color: #ffffff;
     max-height: 400px;
+    cursor: pointer;
   }
     
   .card-img {
     position: relative;
     width: 100%;
+    height: 200px;
   }
   
-  .card-img img {
+  .card-img img{
     width: 100%;
-    height: 200px; /* Fixed height for the image */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
+    height: inherit;
+    object-fit: cover; 
+   
   }
   
   
@@ -24,20 +26,21 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background-color: red;
-    color: white; /* Red shade */
-    padding: 6px 12px;
+    background-color: var(--red-theme-color);
+    color: white; 
+    padding: 4px 10px;
     font-weight: bold;
     letter-spacing: 0.5px;
     font-size: 12px;
+    border-radius: 2px;
   }
   
   .card-content {
     text-align: left;
-    padding: 14px;
+    padding: 12px;
     font-size: 12px;
     font-weight: bold;
-    line-height: 1.6;
+    line-height: 1.3;
     color: #333;
   }
 
