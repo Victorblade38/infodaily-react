@@ -10,7 +10,7 @@
 .general-news-section h1 {
     text-align: left;
     font-size: 1.5rem;
-    color: #000;
+    color: var(--text-color);
 }
 
 .general-news-container{

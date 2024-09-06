@@ -13,7 +13,7 @@
 .hero-container h1 {
   text-align: left;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .hero-bottom-container {

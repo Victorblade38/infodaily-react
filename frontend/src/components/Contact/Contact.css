@@ -19,8 +19,17 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
+    caret-color: var(--border-color);
+    &::placeholder {
+        color: var(--border-color); 
+    }
+    &:focus{
+        border: 1px solid var(--red-theme-color);
+    } 
+    
   }
   
   .contact-left textarea {
@@ -37,7 +46,7 @@
     align-items: center;
     margin-bottom: 20px;
     text-decoration: none;
-    color: #000;
+    color: var(--text-color);
   }
   
   .contact-right .link-item img {

@@ -2,10 +2,12 @@
 
 
 :root{
-    --text-color:#333;
-    --red-theme-color: red;
     --background-color: #f0f0f0;
-    --navbar-color:#fff;
+    --bg-color:#fff;
+    --text-color:#333;
+
+    --border-color:#ccc;
+    --theme-color: red;
   }
 
 *{
@@ -18,8 +20,11 @@
 }
 
 .dark-mode {
-  --background-color: #121212;
+  --background-color: #0C0C0C;
+  --bg-color:#333;
   --text-color: white;
+  
+  --border-color:#fff;
 }
 
 body {

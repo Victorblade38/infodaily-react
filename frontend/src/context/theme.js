@@ -2,10 +2,8 @@ import { createContext, useContext } from "react";
 
 //creating context
 export const ThemeContext = createContext({
-  themeMode,
-  setThemeMode,
-  darkTheme: () => {},
-  lightTheme: () => {},
+  mode: "light",
+  setMode: () => {},
 });
 
 //create provider stored in a variable

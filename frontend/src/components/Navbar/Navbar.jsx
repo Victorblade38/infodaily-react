@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { moon, sun, default_profile } from "../assets";
 
 const Navbar = () => {
+  const [mode, setMode] = useState("light");
+
+  const toggleMode = (e) => {
+    e.preventDefault;
+    if (mode === "light") {
+      setMode("dark");
+      document.documentElement.classList.toggle("dark-mode");
+    } else {
+      setMode("light");
+      document.documentElement.classList.remove("dark-mode");
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -38,8 +51,8 @@ const Navbar = () => {
         />
       </div>
       <div className="navbar-options">
-        <button className="navbar-options-mode">
-          <img src={sun} width={24} alt="moon" />
+        <button className="navbar-options-mode" onClick={toggleMode}>
+          <img src={mode === "light" ? moon : sun} width={24} alt="moon" />
         </button>
         <div className="navbar-options-profile">
           <img src={default_profile} width={36} alt="profile" />

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import { github, linkedin, instagram } from "../assets";
+import { github, linkedin, instagram, email } from "../assets";
 
 const Contact = () => {
   return (
@@ -17,7 +17,7 @@ const Contact = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=prathammhavale38@gmail.com"
             className="link-item"
           >
-            <img src={github} alt="GitHub" />
+            <img src={email} alt="GitHub" />
             Gmail
           </a>
           <a href="https://github.com/Victorblade38" className="link-item">

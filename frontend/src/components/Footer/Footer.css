@@ -50,7 +50,8 @@
 
 .footer hr{
     width: 80%;
-    color: #ffffffad;
+    height: 1px;
+    background-color: #fff;
 }
 .footer-foot p{
     font-size: 12px;
