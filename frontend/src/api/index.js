@@ -1,5 +1,6 @@
-async function getData(category) {
-  const url = `https://api.worldnewsapi.com/top-news?api-key=35fec290539d4c11abaefab329241c89&source-country=in&language=en`;
+async function getData(query) {
+  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  const url = `https://api.worldnewsapi.com/top-news?&api-key=${apiKey}&source-country=in&language=en&q=${query}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -7,7 +8,7 @@ async function getData(category) {
     }
 
     const res = await response.json();
-    console.log(res);
+    //console.log(res);
     return res;
   } catch (error) {
     console.error(error.message);
