@@ -62,9 +62,9 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen flex flex-col gap-10 justify-center items-center bg-gradient-to-b from-gray-500 to-gray-600">
-      <div className="bg-gray-400 p-20 rounded-lg shadow-xl shadow-gray-700">
-        <div className="flex flex-row justify-between mb-8">
+    <div className="xl:h-screen xl:w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center bg-gradient-to-b from-gray-300 to-gray-600">
+      <div className="p-2">
+        <div className="flex flex-row justify-between xl:mb-8 mt-4">
           <form
             className="flex flex-row"
             onSubmit={onSubmitHandler}
@@ -74,21 +74,21 @@ function App() {
               type="text"
               name="input"
               placeholder="search"
-              className="w-96 focus:outline-none p-3 placeholder:text-slate-400 rounded-md shadow-md"
+              className=" md:w-72 lg:w-96 focus:outline-none text-[12px] p-2 xl:p-3  placeholder:text-slate-400 rounded-md shadow-md"
               disabled
             />
             <button
               className="bg-slate-100 px-4 ml-2 rounded-md shadow-md"
               disabled
             >
-              <img src={search} width={20} alt="Search" />
+              <img src={search} alt="Search" className="w-4" />
             </button>
           </form>
           <button
-            className="bg-white px-4 ml-2 rounded-md shadow-md"
+            className="bg-white p-2 xl:px-4 ml-2 rounded-md shadow-md"
             onClick={toggleShowSaved}
           >
-            <img src={bookmark} width={20} alt="Bookmark" />
+            <img src={bookmark} alt="Bookmark" className="w-4" />
           </button>
         </div>
         {loading ? (
@@ -98,11 +98,10 @@ function App() {
         ) : (
           <div
             style={{
-              height: "640px",
               scrollbarWidth: "none", // For Firefox
               msOverflowStyle: "none", // For IE and Edge
             }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 overflow-y-auto"
+            className="lg:h-[640px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 overflow-y-auto p-2"
           >
             {(showSaved ? savedCards : data).map((item, index) => (
               <Cards
