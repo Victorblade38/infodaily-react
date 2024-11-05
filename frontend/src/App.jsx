@@ -101,7 +101,7 @@ function App() {
               scrollbarWidth: "none", // For Firefox
               msOverflowStyle: "none", // For IE and Edge
             }}
-            className="h-auto lg:h-[640px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 overflow-y-auto p-2"
+            className=" lg:h-[640px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 overflow-y-auto p-2"
           >
             {(showSaved ? savedCards : data).map((item, index) => (
               <Cards
