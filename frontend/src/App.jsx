@@ -62,7 +62,7 @@ function App() {
   }, []);
 
   return (
-    <div className="xl:h-screen xl:w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center bg-gradient-to-b from-gray-300 to-gray-600">
+    <div className="xl:h-screen xl:w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center bg-gradient-to-b from-gray-300 to-gray-600  dark:bg-gradient-b-t  dark:from-gray-600  dark:to-gray-800">
       <div className="p-2">
         <div className="flex flex-row justify-between xl:mb-8 mt-4">
           <form
