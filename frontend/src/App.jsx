@@ -47,9 +47,7 @@ function App() {
     const fetchData = async () => {
       try {
         const res = await getData("mumbai");
-        const topNews = res["top_news"];
-        const filterNews = topNews.map((item) => item["news"][0]);
-        setData(filterNews);
+        setData(res.articles);
       } catch (error) {
         setError("Failed to fetch data");
         console.error(error);

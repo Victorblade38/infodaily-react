@@ -7,7 +7,7 @@ const Cards = ({ title, url, urlToImage, onSave, isSaved }) => {
       <img
         src={urlToImage || randomImg}
         alt="img"
-        className=" rounded-md flex justify-center items-center bg-gray-400"
+        className=" rounded-md bg-gray-400 object-fit w-full h-1/2"
       />
       <h1
         style={{

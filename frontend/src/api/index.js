@@ -1,6 +1,6 @@
-async function getData(query) {
+async function getData() {
   const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `https://api.worldnewsapi.com/top-news?&api-key=${apiKey}&source-country=in&language=en&q=${query}`;
+  const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -8,7 +8,7 @@ async function getData(query) {
     }
 
     const res = await response.json();
-    //console.log(res);
+    console.log(res);
     return res;
   } catch (error) {
     console.error(error.message);
