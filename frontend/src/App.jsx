@@ -2,7 +2,7 @@ import search from "./assets/search.png";
 import bookmark from "./assets/bookmark.png";
 import Cards from "./components/Cards";
 import { useEffect, useState } from "react";
-import getData from "./api";
+import getData from "./api/index.js";
 
 function App() {
   const [data, setData] = useState([]);
@@ -47,7 +47,8 @@ function App() {
     const fetchData = async () => {
       try {
         const res = await getData();
-        setData(res.articles);
+        setData(res["articles"]);
+        console.log(res["articles"]);
       } catch (error) {
         setError("Failed to fetch data");
         console.error(error);

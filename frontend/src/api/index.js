@@ -8,7 +8,7 @@ async function getData() {
     }
 
     const res = await response.json();
-    console.log(res);
+    //console.log(res);
     return res;
   } catch (error) {
     console.error(error.message);
