@@ -17,7 +17,7 @@ const Cards = ({ title, url, urlToImage, onSave, isSaved }) => {
       </h1>
 
       <button
-        className="w-full text-white bg-gray-600 p-1 rounded-md 
+        className="w-full text-white bg-blue-900 p-1 rounded-md 
            font-bold  text-[12px] lg:text-sm"
         onClick={onSave}
       >
