@@ -46,9 +46,16 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getData();
-        setData(res["articles"]);
-        console.log(res["articles"]);
+        const w = await getData();
+        if (w && w.articles) {
+          // Check for null and undefined
+          setData(w.articles);
+          console.log(w.articles.length);
+        } else {
+          // Handle the case where w or w.articles is null/undefined
+          console.log("No articles found in the response or invalid response.");
+          console.error("Invalid response from Bi():", w);
+        }
       } catch (error) {
         setError("Failed to fetch data");
         console.error(error);
