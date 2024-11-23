@@ -1,5 +1,5 @@
 async function getData(apiUrl) {
-  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
+  const apiKey = import.meta.env.NEWS_API_KEY;
   const url = `${apiUrl}&apiKey=${apiKey}`;
   try {
     const response = await fetch(url);
