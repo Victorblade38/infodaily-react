@@ -100,7 +100,7 @@ function App() {
         {loading ? (
           <p className="text-white">Loading...</p>
         ) : error ? (
-          <p className="text-red-500">{error}</p>
+          <p className="text-red-500">API Error</p>
         ) : (
           <div
             style={{
