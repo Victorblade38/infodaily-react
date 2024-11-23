@@ -1,11 +1,13 @@
 import search from "./assets/search.png";
 import bookmark from "./assets/bookmark.png";
+import darkModeIcon from "./assets/dark-mode.png";
 import Cards from "./components/Cards";
 import { useEffect, useState } from "react";
 import getData from "./api/index";
 
 function App() {
   const [data, setData] = useState([]);
+  const [theme, setTheme] = useState("light");
   const [searchTerm, setSearchTerm] = useState("");
   const [savedCards, setSavedCards] = useState([]);
   const [showSaved, setShowSaved] = useState(false);
@@ -22,6 +24,10 @@ function App() {
       // If not saved, add it to the saved list
       setSavedCards([...savedCards, card]);
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   const toggleShowSaved = () => {
@@ -65,7 +71,11 @@ function App() {
   }, []);
 
   return (
-    <div className=" min-h-screen min-w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center bg-gray-100">
+    <div
+      className={`min-h-screen min-w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center ${
+        theme === "light" ? "bg-gray-200" : "bg-gray-800"
+      }`}
+    >
       <div className=" flex flex-row justify-between xl:mb-8 mt-4">
         <form
           className="bg-white flex flex-row rounded-md "
@@ -90,6 +100,12 @@ function App() {
         >
           <img src={bookmark} alt="Bookmark" className="w-3" />
         </button>
+        <button
+          className="bg-white p-2 xl:px-4 ml-2 rounded-md "
+          onClick={toggleTheme}
+        >
+          <img src={darkModeIcon} alt="Bookmark" className="w-3" />
+        </button>
       </div>
       {loading ? (
         <p className="text-white">Loading...</p>
@@ -102,6 +118,7 @@ function App() {
               key={index}
               title={item.title}
               url={item.url}
+              theme={theme}
               urlToImage={item.urlToImage}
               onSave={() => handleSaveCard(item)}
               isSaved={savedCards.some((saved) => saved.url === item.url)}
