@@ -1,6 +1,6 @@
-async function getData() {
+async function getData(apiUrl) {
   const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}`;
+  const url = `${apiUrl}&apiKey=${apiKey}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {

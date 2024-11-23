@@ -3,40 +3,27 @@ import randomImg from "../assets/randomImg.jpg";
 
 const Cards = ({ title, url, urlToImage, onSave, isSaved }) => {
   return (
-    <div className="h-[200px] lg:h-[305px] w-[150px] lg:w-[220px] bg-white dark:bg-gray-800 flex flex-col items-center gap-2 p-2 rounded-md shadow-md">
+    <a
+      href={url}
+      className=" h-[310px] lg:h-[305px] md:w-[220px] md:bg-white   flex flex-col items-center justify-between p-2 md:rounded-md md:shadow-md"
+    >
       <img
         src={urlToImage || randomImg}
         alt="img"
-        className=" rounded-md bg-gray-400 object-fit w-full h-1/2"
+        className=" rounded-md bg-gray-400 object-cover w-full h-1/2"
       />
-      <h1
-        style={{
-          scrollbarWidth: "none", // For Firefox
-          msOverflowStyle: "none", // For IE and Edge
-        }}
-        className="h-[50px] lg:h-[100px] text-[8px] lg:text-sm font-bold font-serif ml-1 text-slate-700 dark:text-white overflow-y-auto"
-      >
+      <h1 className="overflow-hidden no-scrollbar h-[100px] lg:h-[100px] text-[14px] lg:text-sm font-bold font-serif text-slate-900 ">
         {title}
       </h1>
-      <div className="flex flex-row gap-12 lg:gap-20">
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer "
-          className="text-blue-500  
-           font-bold  text-[9px] lg:text-sm"
-        >
-          Read more
-        </a>
-        <button
-          className="text-gray-500  dark:text-gray-100
-           font-bold  text-[9px] lg:text-sm"
-          onClick={onSave}
-        >
-          {isSaved ? "Unsave" : "Save"}
-        </button>
-      </div>
-    </div>
+
+      <button
+        className="w-full text-white bg-gray-600 p-1 rounded-md 
+           font-bold  text-[12px] lg:text-sm"
+        onClick={onSave}
+      >
+        {isSaved ? "Unsave" : "Save"}
+      </button>
+    </a>
   );
 };
 
