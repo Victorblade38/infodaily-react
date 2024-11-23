@@ -2,7 +2,7 @@ import search from "./assets/search.png";
 import bookmark from "./assets/bookmark.png";
 import Cards from "./components/Cards";
 import { useEffect, useState } from "react";
-import getData from "./api/index.js";
+import getData from "./api/index";
 
 function App() {
   const [data, setData] = useState([]);
