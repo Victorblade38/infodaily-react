@@ -46,7 +46,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await getData("mumbai");
+        const res = await getData();
         setData(res.articles);
       } catch (error) {
         setError("Failed to fetch data");
