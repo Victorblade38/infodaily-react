@@ -3,7 +3,7 @@ import bookmark from "./assets/bookmark.png";
 import darkModeIcon from "./assets/dark-mode.png";
 import Cards from "./components/Cards";
 import { useEffect, useState } from "react";
-import getData from "./api/index";
+import getData from "./index";
 
 function App() {
   const [data, setData] = useState([]);
@@ -73,7 +73,7 @@ function App() {
   return (
     <div
       className={`min-h-screen min-w-screen flex flex-col gap-4 xl:gap-10 justify-center items-center ${
-        theme === "light" ? "bg-gray-200" : "bg-gray-800"
+        theme === "light" ? "bg-gray-50" : "bg-gray-800"
       }`}
     >
       <div className=" flex flex-row justify-between xl:mb-8 mt-4">
@@ -112,7 +112,7 @@ function App() {
       ) : error ? (
         <p className="text-red-500">API Error</p>
       ) : (
-        <div className=" h-[800px] lg:h-[640px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 overflow-y-auto no-scrollbar">
+        <div className=" h-[800px] lg:h-[640px] grid grid-cols-2 gap-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 overflow-y-auto no-scrollbar">
           {(showSaved ? savedCards : data).map((item, index) => (
             <Cards
               key={index}
