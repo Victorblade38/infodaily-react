@@ -78,7 +78,7 @@ function App() {
     >
       <div className=" flex flex-row justify-between xl:mb-8 mt-4">
         <form
-          className="bg-white flex flex-row rounded-md "
+          className="bg-white flex flex-row rounded-md md:shadow-md"
           onSubmit={onSubmitHandler}
           id="search-form"
         >
@@ -95,13 +95,13 @@ function App() {
           </button>
         </form>
         <button
-          className="bg-white p-2 xl:px-4 ml-2 rounded-md "
+          className="bg-white p-2 xl:px-4 ml-2 rounded-md md:shadow-md"
           onClick={toggleShowSaved}
         >
           <img src={bookmark} alt="Bookmark" className="w-3" />
         </button>
         <button
-          className="bg-white p-2 xl:px-4 ml-2 rounded-md "
+          className="bg-white p-2 xl:px-4 ml-2 rounded-md md:shadow-md"
           onClick={toggleTheme}
         >
           <img src={darkModeIcon} alt="Bookmark" className="w-3" />
