@@ -1,17 +1,19 @@
-async function getData(apiUrl) {
-  const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-  const url = `${apiUrl}&apiKey=${apiKey}`;
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
+import axios from "axios";
 
-    const res = await response.json();
-    //console.log(res);
-    return res;
+async function getData(apiUrl) {
+  console.log("API URL being sent to the backend:", apiUrl);
+  try {
+    // Use full URL in development
+    const response = await axios.get(
+      `https://nodejs-serverless-function-express-infodaily.vercel.app/api/hello?apiUrl=${encodeURIComponent(
+        apiUrl
+      )}`
+    );
+
+    console.warn("Fetched data:", response.data);
+    return response.data;
   } catch (error) {
-    console.error(error.message);
+    console.warn("Frontend Error fetching data:", error.message);
     return null;
   }
 }

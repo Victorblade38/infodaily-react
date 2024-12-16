@@ -49,11 +49,9 @@ function App() {
     try {
       const w = await getData(apiUrl);
       if (w && w.articles) {
-        // Check for null and undefined
         setData(w.articles);
         console.log(w.articles.length);
       } else {
-        // Handle the case where w or w.articles is null/undefined
         console.log("No articles found in the response or invalid response.");
         console.error("Invalid response from getData():", w);
       }
